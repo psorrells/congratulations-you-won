@@ -4,7 +4,7 @@ document.querySelector('button').addEventListener('click', getFetch)
 function getFetch(){
   //const choice = document.querySelector('input').value
   //const url = 'https://pokeapi.co/api/v2/pokemon/'+choice
-
+  document.querySelector('.reward').classList.remove('hidden')
   fetch('https://www.dnd5eapi.co/api/magic-items/')
       .then(res => res.json()) // parse response as JSON
       .then(data => {
