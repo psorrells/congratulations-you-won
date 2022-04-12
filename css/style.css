@@ -14,11 +14,17 @@
 /*******************************************/
 img{
   display: block;
+  height: 100%;
   margin: 0 auto;
 }
 
 .reward {
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
   width: 50vw;
   height: 60vh;
   min-width: 300px;
