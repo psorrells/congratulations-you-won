@@ -12,8 +12,8 @@ function getFetch(){
           .then(res => res.json())
           .then(data => {
             console.log(data)
-            document.querySelector('h2').innerText = data.name
-            document.querySelector('h3').innerHTML = data.desc[0] + '<br>' + data.desc[1]
+            document.querySelector('.reward-name').innerText = data.name
+            document.querySelector('.description').innerHTML = data.desc[0] + '<br>' + data.desc[1]
 
             fetch(`https://api.pexels.com/v1/search?query=${data.name}`,{
               headers: {
