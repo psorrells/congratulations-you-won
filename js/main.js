@@ -15,15 +15,23 @@ function getFetch(){
             document.querySelector('.reward-name').innerText = data.name
             document.querySelector('.description').innerHTML = data.desc[0] + '<br>' + data.desc[1]
 
-            fetch(`https://api.pexels.com/v1/search?query=${data.name}`,{
+            /*fetch(`https://api.pexels.com/v1/search?query=${data.name}`,{
               headers: {
               Authorization: "563492ad6f917000010000018be4c61f98004329b4003a4e20673201"
+                }
+              })*/
+              fetch(`https://imsea.herokuapp.com/api/1?q=${data.name}`, {
+                headers: {
+                  'Access-Control-Allow-Origin': 'same-origin'
                 }
               })
               .then(res => res.json()) // parse response as JSON
               .then(data => {
-                document.querySelector('img').src = data.photos[0].src.medium
+                document.querySelector('img').src = data.results[0]
               })
+              /*.then(data => {
+                document.querySelector('img').src = data.photos[0].src.medium
+              })*/
               .catch(err => {console.log(err)})
 
           })
