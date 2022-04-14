@@ -29,5 +29,5 @@ function getFetch(){
       .catch(err => {
           console.log(`error ${err}`)
       });
-  setTimeout(() => document.querySelector('.reward'.classList.add('hidden')),7000)
+  setTimeout(() => document.querySelector('.reward').classList.add('hidden'),7000)
 }
