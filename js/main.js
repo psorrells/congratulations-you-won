@@ -1,5 +1,5 @@
 //Example fetch using pokemonapi.co
-document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('.button').addEventListener('click', getFetch)
 
 function getFetch(){
   document.querySelector('.reward').classList.remove('hidden')
@@ -20,7 +20,7 @@ function getFetch(){
               })
               .then(res => res.json()) // parse response as JSON
               .then(data => {
-                document.querySelector('img').src = data.photos[0].src.medium
+                document.querySelector('.reward-pic').src = data.photos[0].src.medium
               })
               .catch(err => {console.log(err)})
 

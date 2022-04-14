@@ -12,9 +12,15 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+body {
+  background: rgb(142, 116, 83);
+  text-align: center;
+  color: rgb(16, 26, 40);
+}
 img{
   display: block;
   height: 100%;
+  max-width: 500px;
   margin: 0 auto;
 }
 
